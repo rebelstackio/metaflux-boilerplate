@@ -52,7 +52,7 @@
     "webpack-uglify-js-plugin": "^1.1.9"
   },
   "dependencies": {
-    "@rebelstack-io/metaflux": "^0.1.2",
+    "@rebelstack-io/metaflux": "^1.1.2",
     "jsonpath": "^1.0.0"
   }
 }
