@@ -5,3 +5,48 @@
 	padding: 0;
 	font-family: Roboto;
 }
+html, body, main-container, .container {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.st9 {
+	fill:#004484
+}
+.st29, .st30, .st31 {
+	opacity: 5.000000e-02;
+	fill: #004484
+}
+.st30, .st31 {
+	opacity: .15
+}
+.st31 {
+	opacity: .3
+}
+.st32, .st33, .st34 {
+	opacity:.4;
+	fill: #004484
+}
+.st33, .st34 {
+	opacity: .5
+}
+.st34 {
+	opacity: .6
+}
+.st35, .st36, .st37 {
+	opacity: .7;
+	fill: #004484
+}
+.st36, .st37 {
+	opacity: .8
+}
+.st37 {
+	opacity: .9
+}
+.circle {
+	transition: opacity 1s, fill 1s;
+}
+.selected-circle, .circle:hover {
+	opacity: 1 !important;
+	fill: #ea7125 !important;
+}

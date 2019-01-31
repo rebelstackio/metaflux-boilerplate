@@ -1,15 +1,15 @@
 import { MetaContainer } from '@rebelstack-io/metaflux';
 import '../../css/general.css';
 import '../../handlers';
-import '../../components/counter';
+import '../../components/peru-map';
 
 class MainContainer extends MetaContainer {
 	// eslint-disable-next-line class-method-use-this
 	render () {
 		const content = document.createElement('div');
-		content.id = 'container';
-		const counter = document.createElement('simple-counter');
-		content.appendChild(counter);
+		content.className = 'container';
+		const peruMap = document.createElement('peru-map');
+		content.appendChild(peruMap);
 		return content;
 	}
 }
