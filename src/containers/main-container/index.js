@@ -1,7 +1,5 @@
-import { MetaContainer } from '@rebelstack-io/metaflux';
-import '../../css/general.css';
-import '../../handlers';
-import '../../components/counter';
+import '../../handlers/index.js';
+import '../../components/counter/index.js';
 
 class MainContainer extends MetaContainer {
 	// eslint-disable-next-line class-method-use-this

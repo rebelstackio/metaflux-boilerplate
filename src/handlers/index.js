@@ -1,9 +1,8 @@
-import { Store } from '@rebelstack-io/metaflux';
-import main from './MainHandler';
+import main from './MainHandler.js';
 
 const { MainDefaultState, MainHandler } = main;
 
-global.storage = new Store(
+window.storage = new Store(
 	{Main: MainDefaultState},
 	MainHandler
 );

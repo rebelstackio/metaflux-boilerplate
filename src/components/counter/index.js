@@ -1,12 +1,10 @@
-import { MetaComponent } from '@rebelstack-io/metaflux';
-import '../../handlers';
 
 class Counter extends MetaComponent {
 	/**
 	 * MetaComponent constructor needs storage.
 	 */
 	constructor () {
-		super(global.storage);
+		super(window.storage);
 	}
 	// eslint-disable-next-line class-method-use-this
 	render () {
@@ -28,7 +26,7 @@ class Counter extends MetaComponent {
 	 */
 	handleStoreEvents () {
 		return {
-			'INCREMENT': action => {
+			'INCREMENT': () => {
 				this.text.textContent = this.storage.getState().Main.value;
 			}
 		};
