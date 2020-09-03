@@ -1,0 +1,59 @@
+cah-hand {
+	width: 95%;
+	height: 250px;
+	display: block;
+	justify-self: center;
+	align-self: center;
+
+	> div {
+		position: relative;
+
+		> cah-card {
+			position: absolute;
+			z-index: 0;
+			left: 0;
+			transition: all 300ms;
+			cursor: pointer;
+		}
+
+		@for $i from 2 to 11 {
+			> cah-card:nth-child(#{$i}) {
+				z-index: #{$i};
+				left: calc(#{$i - 1} * 140px);
+			}
+		}
+
+		> cah-card:hover, > cah-card.selected {
+			z-index: 11;
+			transform: translateY(-15px) scale(1.1, 1.1);
+			box-shadow: 0 0 5px #000000;
+		}
+
+		> cah-card.selected {
+			z-index: 12;
+			transform: translateY(-35px) scale(1.2, 1.2);
+
+			span {
+				position: absolute;
+				border-radius: 2px;
+				padding: 5px 10px 5px 10px;
+				background-color: var(--cah-light);
+				color: var(--cah-lightest);
+				top: -25px;
+			}
+		}
+
+		> cah-card:not(.selected) {
+			span {
+				visibility: hidden;
+				display: none;
+			}
+		}
+	}
+
+	> div.full-hand {
+		> cah-card:not(.selected) {
+			filter: brightness(85%);
+		}
+	}
+}

@@ -1,0 +1,45 @@
+table-top {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	position: relative;
+	grid-template-rows: 1fr 1fr;
+
+	cah-czar {
+		justify-self: center;
+		align-self: center;
+		width: 90%;
+
+		> div {
+			display: flex;
+			flex-wrap: wrap-reverse;
+			justify-content: space-between;
+		}
+
+		cah-card.black > div {
+			width: calc(var(--cah-card-width) * 1.3);
+			height: calc(var(--cah-card-height) * 1.3);
+
+			span {
+				border-radius: 2px;
+				padding: 2px 4px 2px 4px;
+				margin: 0 2px 0 2px;
+				background-color: var(--cah-light);
+				color: var(--cah-lightest);
+			}
+		}
+	}
+
+	@for $i from 1 to 3 {
+		cah-hand cah-card {
+			span.cah-card-count-#{$i} {
+				filter: hue-rotate(#{$i * 100deg});
+			}
+		}
+		cah-czar cah-card {
+			span:nth-child(#{$i}) {
+				filter: hue-rotate(#{$i * 100deg});
+			}
+		}
+	}
+}

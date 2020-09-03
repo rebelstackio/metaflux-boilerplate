@@ -1,0 +1,27 @@
+cah-card {
+	display: inline-block;
+	background-color: var(--cah-darkest);
+	border-radius: 6px;
+	padding: .5em;
+	box-shadow: 0 0 2px #000000;
+
+	> div {
+		width: var(--cah-card-width);
+		height: var(--cah-card-height);
+		padding: 1em;
+		border-radius: 6px;
+		border: 1px solid var(--cah-lightest)
+	}
+}
+
+cah-card.white {
+	background-color: var(--cah-lightest);
+
+	> div {
+		border: 1px solid var(--cah-darkest)
+	}
+
+	* {
+		color: var(--cah-darkest);
+	}
+}

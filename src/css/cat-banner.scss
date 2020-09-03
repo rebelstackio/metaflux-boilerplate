@@ -1,0 +1,44 @@
+cat-banner {
+	position: absolute;
+	top: -200px;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: all 300ms;
+
+	img {
+		width: auto;
+		height: 200px;
+	}
+
+	.button-group {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		display: flex;
+		flex-direction: column;
+
+		div {
+			cursor: pointer;
+			margin-top: 1em;
+			margin: .5em 1em .3em 1em;
+			text-align: center;
+			font-size: 1.3em;
+			font-family: "Walter Turncoat";
+			color: var(--cah-dark);
+			border: 2px solid var(--cah-dark);
+			border-radius: 6px;
+			box-shadow: 0 0 5px var(--cah-dark);
+		}
+
+		div:hover {
+			text-decoration: underline;
+			transform: scale(1.2, 1.2);
+		}
+	}
+}
+
+cat-banner.open {
+	top: 0;
+}

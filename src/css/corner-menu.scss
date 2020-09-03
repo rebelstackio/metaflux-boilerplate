@@ -1,0 +1,23 @@
+corner-menu {
+	display: block;
+	padding: 0 1em 1em 1em;
+
+	> div {
+		display: flex;
+		justify-content: flex-end;
+
+		* {
+			user-select: none;
+			cursor: pointer;
+		}
+
+		> *:not(:last-child) {
+			margin-right: 10px;
+		}
+
+		*:hover {
+			box-shadow: 0 0 5px #000000;
+			transform: scale(1.2, 1.2);
+		}
+	}
+}
