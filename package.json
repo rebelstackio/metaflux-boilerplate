@@ -1,6 +1,6 @@
 {
   "name": "metaflux-boilerplate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Project Boilerplate for metaflux",
   "main": "index.js",
   "scripts": {
@@ -52,7 +52,6 @@
     "webpack-uglify-js-plugin": "^1.1.9"
   },
   "dependencies": {
-    "@rebelstack-io/metaflux": "^1.1.2",
-    "jsonpath": "^1.0.0"
+    "@rebelstack-io/metaflux": "^2.0.2"
   }
 }

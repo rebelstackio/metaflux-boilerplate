@@ -1,5 +1,4 @@
-import { MetaComponent } from '@rebelstack-io/metaflux';
-import '../../handlers';
+import { MetaComponent, Div, Button } from '@rebelstack-io/metaflux';
 
 class Counter extends MetaComponent {
 	/**
@@ -10,16 +9,11 @@ class Counter extends MetaComponent {
 	}
 	// eslint-disable-next-line class-method-use-this
 	render () {
-		const content = document.createElement('div');
-		this.btn = document.createElement('button');
-		this.btn.addEventListener('click', () => {
+		this.btn = Button({onclick: () =>{
 			this.storage.dispatch({type: 'INCREMENT'});
-		});
-		this.btn.textContent = 'Increase';
-		content.appendChild(this.btn);
-		this.text = document.createElement('div');
-		this.text.textContent = this.storage.getState().Main.value;
-		content.appendChild(this.text);
+		}}, 'Increase')
+		this.text = Div({}, this.storage.getState().Main.value);
+		const content = Div({}, [ this.btn, this.text ]);
 		return content;
 	}
 
@@ -28,7 +22,7 @@ class Counter extends MetaComponent {
 	 */
 	handleStoreEvents () {
 		return {
-			'INCREMENT': action => {
+			'INCREMENT': () => {
 				this.text.textContent = this.storage.getState().Main.value;
 			}
 		};
